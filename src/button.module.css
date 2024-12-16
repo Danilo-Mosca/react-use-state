@@ -1,0 +1,15 @@
+button {
+    background-color: #0D6EFD;
+    color: white;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #FFC107 !important;
+    color: black !important;
+    border-color: #FFC107 !important;
+}
+
+.prova {
+    color: red;
+}
