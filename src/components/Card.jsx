@@ -17,9 +17,9 @@ function Card({ activeButton }) {
     return (
         <>
             {/* Se il valore di languageSel è null allora nascondo la card intera con la classe "card-none" altrimenti la visualizzo con la classe "card" */}
-            <div className={languageSel == null ? "card-none" : "card"} style={{ width: "500px" }}>
+            <div className={languageSel == null ? "card-none" : "card"}>
                 <div className="card-body">
-                    <h5 className="card-title" style={{ textTransform: "uppercase" }}>{languageSel == null ? "" : languageSel.title}</h5>
+                    <h5 className="card-title" style={{ textTransform: "uppercase" }}>{languageSel == null ? "Nessun linguaggio selezionato" : languageSel.title}</h5>
                     <p className="card-text">{languageSel == null ? "" : languageSel.description}</p>
                 </div>
             </div>

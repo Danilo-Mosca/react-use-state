@@ -30,7 +30,7 @@ function App() {
                   key={language.id}
                   selected={activeButton === language.id}
                   activeButton={() => buttonActive(language.id)}
-                />)
+                />);
             })
           }
         </section>

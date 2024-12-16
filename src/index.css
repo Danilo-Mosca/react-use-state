@@ -8,3 +8,20 @@
 .debug {
   border: 1px solid red;
 }
+
+body {
+  margin: 50px auto;
+  max-width: 1400px;
+}
+
+main {
+  margin: 50px 60px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ul li {
+  display: inline-block;
+} */
