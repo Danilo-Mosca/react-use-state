@@ -1,9 +1,9 @@
 // Importo i CSS Modules Dei Bottoni
 import style from '../Button.module.css';
 
-function Button() {
+function Button({title}) {
     return (
-    <button type="button" className="btn btn-primary">Primary</button>
+        <button type="button" className="btn btn-primary">{title}</button>
     );
 }
 
