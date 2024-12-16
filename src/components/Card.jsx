@@ -1,29 +1,30 @@
 import languages from '../data/languages';     //importo l'oggetto languages
 
-function Card(activeButton) {
+function Card({ activeButton }) {
     const languageSel = languages.filter((language) => {
-        console.log("Language: ",language.id);
-        console.log("ActiveButton: ",activeButton);
-        
-        if (parseInt(language.id) === parseInt(activeButton)) {
-            console.log("Language selected: ", language.id);
-            console.log("ActiveButton selected: ", activeButton);
+        // console.log("Language: ", language.id);     //test
+        // console.log("ActiveButton: ", activeButton);   //test
+
+        if (parseInt(language.id) == parseInt(activeButton)) {
+            // console.log("Language selected: ", language.id);    //test
+            // console.log("ActiveButton selected: ", activeButton);  //test
             return language;
-};
-    });
-console.log("LanguageSel: ",languageSel);
+        };
+    })[0];
+    // console.log("LanguageSel: ", languageSel);  //test
 
 
-return (
-    <>
-        <div className="card" style={{ width: "500px" }}>
-            <div className="card-body">
-                <h5 className="card-title" style={{ textTransform: "uppercase" }}>Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    return (
+        <>
+            {/* Se il valore di languageSel è null allora nascondo la card intera con la classe "card-none" altrimenti la visualizzo con la classe "card" */}
+            <div className={languageSel == null ? "card-none" : "card"} style={{ width: "500px" }}>
+                <div className="card-body">
+                    <h5 className="card-title" style={{ textTransform: "uppercase" }}>{languageSel == null ? "" : languageSel.title}</h5>
+                    <p className="card-text">{languageSel == null ? "" : languageSel.description}</p>
+                </div>
             </div>
-        </div>
-    </>
-);
+        </>
+    );
 }
 
 export default Card;

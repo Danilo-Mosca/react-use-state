@@ -9,3 +9,8 @@ button:hover {
     color: black !important;
     border-color: #FFC107 !important;
 }
+
+.buttonActive {
+    background-color: #FFC107;
+    border-color: #FFC107;
+}

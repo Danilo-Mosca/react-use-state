@@ -3,7 +3,8 @@ import style from '../Button.module.css';
 
 function Button({title, selected, activeButton}) {
     return (
-        <button type="button" className="btn btn-primary" onClick={activeButton}>{title}</button>
+        // Assegno una classe CSS con un colore diverso al pulsante su cui ho cliccato
+        <button type="button" className={selected ? `btn btn-primary ${style.buttonActive}` : "btn btn-primary"} onClick={activeButton}>{title}</button>
     );
 }
 
